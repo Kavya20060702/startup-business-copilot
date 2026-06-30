@@ -23,7 +23,7 @@ Startup Business Copilot helps founders, investors, and business analysts evalua
 
 ---
 
-<img width="1284" height="832" alt="Image" src="https://github.com/user-attachments/assets/6528ad7d-5740-4bd8-9a1e-2c892aa861d3" />
+<img width="1284" height="832" alt="Image" src="https://github.com/user-attachments/assets/2d150254-6055-4bf1-bc8f-f05cf7904fc1" />
 
 ---
 ## 🌟 Why This Project Stands Out
