@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+.env
+uploads/
+reports/
+chroma_db/   (if it contains generated data)

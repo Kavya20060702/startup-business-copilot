@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venture Copilot - Institutional Grade Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-mark">⚡</span>
+                <span class="logo-text">Venture Copilot</span>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#analyzer" class="nav-item active">
+                    <span class="nav-icon">📊</span>
+                    <span>Analyzer Dashboard</span>
+                </a>
+                <a href="#benchmarks" class="nav-item">
+                    <span class="nav-icon">📈</span>
+                    <span>Vector Benchmarks</span>
+                </a>
+                <a href="/docs" target="_blank" class="nav-item">
+                    <span class="nav-icon">📡</span>
+                    <span>API Documentation</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="status-card">
+                    <span class="status-title">STATUS</span>
+                    <div class="status-indicator">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Engine Online</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <!-- Top Header -->
+            <header class="top-header">
+                <div class="header-brand">
+                    <span class="header-icon">📈</span>
+                    <span class="header-title">Venture Copilot</span>
+                </div>
+                <nav class="header-nav">
+                    <a href="#analyzer" class="header-link active">Analyzer</a>
+                    <a href="#benchmarks" class="header-link">Benchmarks</a>
+                    <a href="#reports" class="header-link">Reports</a>
+                </nav>
+                <div class="header-actions">
+                    <button id="toggleChatBtn" class="btn btn-purple-sm">💬 Ask Copilot</button>
+                </div>
+            </header>
+
+            <main class="content-body">
+                <!-- Workspace Grid -->
+                <div class="workspace-grid">
+                    <!-- Left Card: Startup Due-Diligence Submission -->
+                    <section id="analyzer" class="card form-card">
+                        <div class="card-header-group">
+                            <h2 class="card-heading">Startup Due-Diligence Submission</h2>
+                            <p class="card-subheading">Input raw startup data or parse pitch documents.</p>
+                        </div>
+
+                        <!-- Pitch Deck Upload Dropzone -->
+                        <div class="upload-dropzone" id="dropzone">
+                            <input type="file" id="fileInput" accept=".pdf,.csv" class="hidden">
+                            <div class="dropzone-content">
+                                <span class="upload-icon">📄</span>
+                                <span class="upload-text" id="uploadStatusText">Upload Pitch Deck (PDF) or Financial Model (CSV)</span>
+                                <span class="upload-sub">Auto-populates analysis inputs</span>
+                            </div>
+                        </div>
+
+                        <form id="startupForm">
+                            <div class="form-row gap-16">
+                                <div class="form-group flex-1">
+                                    <label for="startupName">STARTUP NAME</label>
+                                    <input type="text" id="startupName" value="FreightFlow AI" placeholder="e.g. NeoNexus AI" required>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="targetIndustry">INDUSTRY</label>
+                                    <input type="text" id="targetIndustry" value="Logistics & Supply Chain" placeholder="FinTech / SaaS" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="businessModel">BUSINESS MODEL</label>
+                                <select id="businessModel" class="custom-select">
+                                    <option value="B2B SaaS Subscription">B2B SaaS Subscription</option>
+                                    <option value="Usage-Based Enterprise">Usage-Based Enterprise</option>
+                                    <option value="Marketplace Platform">Marketplace Platform</option>
+                                    <option value="Transactional API">Transactional API</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">ELEVATOR PITCH</label>
+                                <textarea id="description" rows="4" placeholder="Describe the core problem, solution, and unique value proposition..." required>An autonomous AI platform that predicts shipping delays, re-routes regional freight vehicles dynamically in real-time, and reduces fuel costs for logistics fleets.</textarea>
+                            </div>
+
+                            <div class="form-row gap-12">
+                                <div class="form-group flex-1">
+                                    <label for="pricingDetails">PRICING ($)</label>
+                                    <input type="text" id="pricingDetails" value="500/mo per hub" placeholder="500/mo" required>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="fundingRaised">FUNDING GOAL</label>
+                                    <input type="text" id="fundingRaised" value="1.2M Seed" placeholder="2.5M" required>
+                                </div>
+                                <div class="form-group flex-1">
+                                    <label for="monthlyExpenses">OPEX (MONTHLY)</label>
+                                    <input type="text" id="monthlyExpenses" value="45k/mo" placeholder="80k" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="knownCompetitors">KEY COMPETITORS</label>
+                                <input type="text" id="knownCompetitors" value="LegacyLogistics, FleetTech Solutions" placeholder="Separate names with commas..." required>
+                            </div>
+
+                            <button type="submit" id="analyzeBtn" class="btn btn-purple btn-block">
+                                <span class="btn-icon">🚀</span>
+                                <span>Launch Multi-Agent Analysis</span>
+                            </button>
+                        </form>
+                    </section>
+
+                    <!-- Right Card: Executive Evaluation Dossier -->
+                    <section id="reports" class="card dossier-card">
+                        <div class="dossier-header-bar">
+                            <h2 class="card-heading">Executive Evaluation Dossier</h2>
+                            <div class="dossier-actions hidden" id="dossierActions">
+                                <button id="copyMemoBtn" class="btn btn-outline-sm">
+                                    <span>📋 COPY MEMO</span>
+                                </button>
+                                <button id="downloadPdfBtn" class="btn btn-outline-sm">
+                                    <span>📥 PDF REPORT</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="loadingState" class="loading-state hidden">
+                            <div class="pulse-loader"></div>
+                            <p class="loading-label">Synthesizing Business, Financial & Live Web Intelligence Agents...</p>
+                        </div>
+
+                        <div id="placeholderState" class="placeholder-state">
+                            <div class="placeholder-icon-ring">🎯</div>
+                            <h3>Awaiting Submission</h3>
+                            <p>Submit startup parameters to execute real-time AI due-diligence validation.</p>
+                        </div>
+
+                        <div id="resultsDashboard" class="results-dashboard hidden">
+                            <!-- Investment Rating Banner -->
+                            <div class="rating-banner">
+                                <div class="rating-left">
+                                    <span class="rating-tag">INVESTMENT RATING</span>
+                                    <h3 class="rating-grade" id="gradeValue">Grade A - Strongly Recommended</h3>
+                                </div>
+                                <div class="rating-right">
+                                    <span class="confidence-val" id="confidenceVal">94%</span>
+                                    <span class="confidence-lbl">Confidence</span>
+                                </div>
+                            </div>
+
+                            <!-- Synthesis Brief -->
+                            <div class="synthesis-box">
+                                <div class="synthesis-tag">AI DUE-DILIGENCE SYNTHESIS</div>
+                                <p id="execSummaryText" class="synthesis-text"></p>
+                            </div>
+
+                            <!-- Metrics Grid -->
+                            <div class="metrics-trio">
+                                <div class="metric-box">
+                                    <span class="metric-lbl">Market Feasibility</span>
+                                    <div class="metric-num" id="marketScore">8/10</div>
+                                    <div class="metric-bar-bg"><div class="metric-bar-fill" id="marketBar" style="width: 80%;"></div></div>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="metric-lbl">Revenue Scalability</span>
+                                    <div class="metric-num" id="financeScore">9/10</div>
+                                    <div class="metric-bar-bg"><div class="metric-bar-fill emerald" id="financeBar" style="width: 90%;"></div></div>
+                                </div>
+                                <div class="metric-box">
+                                    <span class="metric-lbl">Moat Defensibility</span>
+                                    <div class="metric-num" id="moatScore">8/10</div>
+                                    <div class="metric-bar-bg"><div class="metric-bar-fill" id="moatBar" style="width: 80%;"></div></div>
+                                </div>
+                            </div>
+
+                            <!-- Tabs Row -->
+                            <div class="tab-bar">
+                                <button class="tab-item active" data-tab="unitEconomics">UNIT ECONOMICS</button>
+                                <button class="tab-item" data-tab="competitors">COMPETITOR LANDSCAPE</button>
+                                <button class="tab-item" data-tab="recommendations">STRATEGIC REC</button>
+                            </div>
+
+                            <!-- Tab Contents -->
+                            <div class="tab-viewport">
+                                <div class="tab-panel" id="unitEconomicsTab">
+                                    <div class="economics-grid" id="economicsGrid"></div>
+                                </div>
+                                <div class="tab-panel hidden" id="competitorsTab">
+                                    <div id="competitorList" class="competitor-stack"></div>
+                                </div>
+                                <div class="tab-panel hidden" id="recommendationsTab">
+                                    <ul class="rec-list" id="recommendationsList"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Bottom Section: Historical Benchmarks -->
+                <section id="benchmarks" class="card benchmarks-card">
+                    <div class="benchmarks-header">
+                        <div>
+                            <h2 class="card-heading">Historical Benchmarks</h2>
+                            <p class="card-subheading">Query the global knowledge base for similar startup vectors.</p>
+                        </div>
+                        <div class="search-box">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="memorySearchInput" placeholder="Vector Memory RAG Benchmark Search...">
+                            <button id="searchMemoryBtn" class="btn btn-dark-sm">Search</button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="benchmark-table">
+                            <thead>
+                                <tr>
+                                    <th>STARTUP PROFILE</th>
+                                    <th>INDUSTRY</th>
+                                    <th>VALUATION (EXIT)</th>
+                                    <th>SIMILARITY</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+                            <tbody id="memoryTableBody">
+                                <tr>
+                                    <td class="fw-600">DataPulse Analytics</td>
+                                    <td class="text-muted">Data Infra</td>
+                                    <td class="fw-600">$142M</td>
+                                    <td>
+                                        <div class="sim-bar-wrapper">
+                                            <div class="sim-bar-fill" style="width: 94%;"></div>
+                                            <span class="sim-val">94%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-acquired">ACQUIRED</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-600">QuantumFlow AI</td>
+                                    <td class="text-muted">Developer Tools</td>
+                                    <td class="fw-600">$85M</td>
+                                    <td>
+                                        <div class="sim-bar-wrapper">
+                                            <div class="sim-bar-fill purple" style="width: 72%;"></div>
+                                            <span class="sim-val">72%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-series">SERIES B</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-600">SecureStack</td>
+                                    <td class="text-muted">Cybersecurity</td>
+                                    <td class="fw-600">$2.1B</td>
+                                    <td>
+                                        <div class="sim-bar-wrapper">
+                                            <div class="sim-bar-fill purple" style="width: 61%;"></div>
+                                            <span class="sim-val">61%</span>
+                                        </div>
+                                    </td>
+                                    <td><span class="badge badge-ipo">IPO</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Slide-Out AI Chat Drawer -->
+            <div id="chatDrawer" class="chat-drawer hidden">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <span>🤖</span>
+                        <span>Ask the Copilot Assistant</span>
+                    </div>
+                    <button id="closeChatBtn" class="close-btn">✕</button>
+                </div>
+                <div id="chatMessages" class="chat-messages">
+                    <div class="chat-bubble assistant-bubble">
+                        Hello! Ask me any follow-up questions or scenarios regarding the evaluated startup (e.g. CAC sensitivity, email drafts, market risks).
+                    </div>
+                </div>
+                <div class="chat-input-bar">
+                    <input type="text" id="chatInput" placeholder="Ask a follow-up question...">
+                    <button id="sendChatBtn" class="btn btn-purple-sm">Send</button>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-left">
+                    <span class="footer-brand">Venture Copilot AI</span>
+                    <span class="footer-sub">Institutional Grade Intelligence.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Status</a>
+                    <span class="copyright">© 2026</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

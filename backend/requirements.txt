@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+pandas
+matplotlib
+pydantic
+google-genai
+google-adk
+chromadb
+reportlab
+pypdf
+duckduckgo-search

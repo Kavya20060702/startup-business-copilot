@@ -1,0 +1,10 @@
+{
+  "startup_name": "FreightFlow AI",
+  "target_industry": "Logistics & Supply Chain",
+  "business_model": "B2B SaaS Subscription",
+  "description": "An autonomous AI platform that predicts shipping delays, re-routes regional freight vehicles dynamically in real-time, and reduces fuel costs for logistics fleets.",
+  "pricing_details": "$500/month per fleet hub + tiered usage based on miles tracked.",
+  "funding_raised": "$1.2M Seed Round",
+  "monthly_expenses": "$45,000/month",
+  "known_competitors": "LegacyLogistics Corp, FleetTech Solutions, manual dispatchers"
+}
