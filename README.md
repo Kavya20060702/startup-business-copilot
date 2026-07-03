@@ -1,140 +1,169 @@
-# 🚀 Startup Business Copilot ( Kaggle Project )
+# 🚀 Startup Business Copilot
 
-> **An AI-powered Multi-Agent Business Intelligence Platform built with Google Gemini, FastAPI, ChromaDB, and modern Agentic AI principles.**
+### AI-Powered Multi-Agent Business Intelligence Platform
 
-Startup Business Copilot helps founders, investors, and business analysts evaluate startups by combining multiple specialized AI agents that collaborate to generate comprehensive business insights, executive reports, and strategic recommendations.
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Google Gemini](https://img.shields.io/badge/Google-Gemini-orange)
+![ChromaDB](https://img.shields.io/badge/RAG-ChromaDB-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+Startup Business Copilot is an AI-powered business intelligence platform that helps founders, investors, and business analysts evaluate startups through a collaborative multi-agent workflow.
+
+The platform combines specialized AI agents, Google Gemini, vector memory (RAG), real-time market intelligence, and automated executive reporting to generate comprehensive startup analyses and strategic recommendations.
+
+---
+
+# 🎯 Problem Statement
+
+Evaluating a startup requires expertise across multiple domains including business strategy, financial planning, competitive analysis, and market research. This process is often time-consuming, expensive, and requires multiple specialists.
+
+Startup Business Copilot simplifies this workflow by coordinating multiple AI agents that collaborate to analyze business information, generate insights, and produce professional reports within minutes.
 
 ---
 
 # ✨ Features
 
-* 🤖 Multi-Agent AI Architecture
-* 💼 Business Analyst Agent
-* 💰 Financial Analyst Agent
-* 📈 Competitor Intelligence Agent
-* 💬 AI Chat Copilot
-* 🧠 Vector Memory (RAG) using ChromaDB
-* 🌐 Real-Time Market Intelligence
-* 📄 Executive PDF Report Generator
-* 📁 PDF & CSV Document Parsing
-* 📊 Interactive Business Dashboard
-* ⚡ FastAPI REST API
-* 🎨 Modern Responsive UI
+- 🤖 Multi-Agent AI Architecture
+- 💼 Business Analyst Agent
+- 💰 Financial Analyst Agent
+- 📈 Competitor Intelligence Agent
+- 💬 AI Chat Copilot
+- 🧠 Vector Memory (RAG) using ChromaDB
+- 🌐 Real-Time Market Intelligence
+- 📄 Executive PDF Report Generator
+- 📁 PDF & CSV Document Parsing
+- 📊 Interactive Business Dashboard
+- ⚡ FastAPI REST API
+- 🎨 Modern Responsive Web Interface
 
 ---
 
-<img width="1284" height="832" alt="Image" src="https://github.com/user-attachments/assets/2d150254-6055-4bf1-bc8f-f05cf7904fc1" />
+# 🌟 Why This Project Stands Out
+
+Unlike traditional AI assistants that rely on a single prompt-response workflow, Startup Business Copilot distributes responsibilities across specialized AI agents.
+
+Each agent focuses on a specific domain—business strategy, financial analysis, competitor intelligence, and user interaction—resulting in more structured analysis and clearer decision support.
+
+## Key Highlights
+
+- 🤖 **Multi-Agent Collaboration** — Specialized Business, Financial, Competitor, and Chat Assistant agents coordinated through an orchestration layer.
+- 🧠 **Retrieval-Augmented Generation (RAG)** — ChromaDB stores previous startup evaluations and retrieves similar companies for contextual recommendations.
+- 📊 **Business Intelligence** — Generates structured insights covering business models, financial health, market opportunities, and strategic risks.
+- 📄 **Executive Reports** — Automatically produces professional PDF reports suitable for founders, investors, and stakeholders.
+- 🌐 **Real-Time Market Intelligence** — Uses web search capabilities to enrich competitor analysis with current market information.
+- 📁 **Document Processing** — Extracts and analyzes information from uploaded PDF pitch decks and CSV financial data.
+- 💬 **Interactive AI Assistant** — Supports follow-up questions after analysis without restarting the workflow.
+- ⚡ **Modern Full-Stack Platform** — Built with FastAPI and a responsive frontend for a seamless user experience.
+- 🏗️ **Modular Architecture** — Agents, tools, memory, APIs, and reporting modules are independently organized for scalability and maintenance.
 
 ---
-## 🌟 Why This Project Stands Out
 
-Unlike traditional AI applications that rely on a single model, **Startup Business Copilot** uses a **multi-agent architecture** where specialized AI agents collaborate to perform different aspects of business analysis. This modular approach enables more structured reasoning and clearer responsibilities for each agent.
+# 🏢 Real-World Applications
 
-### Key Highlights
+- Startup Due Diligence
+- Venture Capital Screening
+- Investment Research
+- Business Consulting
+- Market Analysis
+- Founder Decision Support
+- Strategic Business Evaluation
 
-* 🤖 **Multi-Agent Collaboration** – Dedicated Business, Financial, Competitor, and Chat Assistant agents coordinated by an Orchestrator Agent.
-* 🧠 **Retrieval-Augmented Generation (RAG)** – ChromaDB vector memory stores previous analyses and retrieves similar startup evaluations to provide contextual insights.
-* 📊 **Business Intelligence** – Generates structured reports covering business models, financial health, competitive positioning, and strategic recommendations.
-* 📄 **Automated Executive Reports** – Produces professional PDF summaries that can be shared with founders, investors, or stakeholders.
-* 🌐 **Real-Time Market Intelligence** – Integrates web search capabilities to enrich competitor analysis with current market information.
-* 📁 **Document Processing** – Extracts information from uploaded PDFs and CSV files to automate business evaluation workflows.
-* 💬 **Interactive AI Assistant** – Enables users to ask follow-up questions about the generated analysis without starting over.
-* ⚡ **Modern Full-Stack Application** – Built with FastAPI and a responsive web interface for an end-to-end user experience.
-* 🏗️ **Modular & Extensible Design** – Agent logic, tools, memory, and reporting components are separated, making the system easier to maintain and extend.
+---
 
-### Real-World Applications
+# 🏗️ System Architecture
 
-* Startup due diligence
-* Venture capital screening
-* Business consulting
-* Investment research
-* Market analysis
-* Founder decision support
-* Business strategy evaluation
+> **Architecture Diagram**
 
-# 🚀 Tech Stack
+![Architecture](docs/architecture.png)
 
-### Backend
+---
 
-* Python
-* FastAPI
-* Google Gemini API
-* ChromaDB
-* ReportLab
-* Pandas
+# 🔄 Workflow
 
-### Frontend
-
-* HTML
-* CSS
-* JavaScript
-
-### AI
-
-* Multi-Agent Architecture
-* Retrieval-Augmented Generation (RAG)
-* Semantic Vector Search
-* Real-Time Web Search
-* Intelligent Agent Orchestration
+```
+                User
+                  │
+                  ▼
+        Upload PDF / CSV / Startup Details
+                  │
+                  ▼
+          Business Analyst Agent
+                  │
+                  ▼
+         Financial Analyst Agent
+                  │
+                  ▼
+      Competitor Intelligence Agent
+                  │
+                  ▼
+         Vector Memory (ChromaDB)
+                  │
+                  ▼
+      Executive PDF Report Generator
+                  │
+                  ▼
+        Interactive Dashboard & Chat
+```
 
 ---
 
 # 🤖 AI Agents
 
-## Business Analyst
+## 💼 Business Analyst
 
 Analyzes:
 
-* Business model
-* Value proposition
-* Product-market fit
-* Risks
-* Strategic recommendations
+- Business Model
+- Value Proposition
+- Product-Market Fit
+- Risks
+- Strategic Recommendations
 
 ---
 
-## Financial Analyst
+## 💰 Financial Analyst
 
 Evaluates:
 
-* Revenue model
-* Burn rate
-* Unit economics
-* Pricing strategy
-* Financial health
+- Revenue Model
+- Burn Rate
+- Unit Economics
+- Pricing Strategy
+- Financial Health
 
 ---
 
-## Competitor Intelligence Agent
+## 📈 Competitor Intelligence Agent
 
 Performs:
 
-* Competitor discovery
-* SWOT analysis
-* Market positioning
-* Competitive moat evaluation
+- Competitor Discovery
+- SWOT Analysis
+- Market Positioning
+- Competitive Moat Evaluation
 
 ---
 
-## Chat Copilot
+## 💬 Chat Copilot
 
-Allows users to ask follow-up questions after analysis.
+Allows users to ask follow-up questions after the initial analysis.
 
 Example:
 
-> "What are the biggest risks for this startup?"
+> "What are the biggest financial risks for this startup?"
 
 ---
 
-# 🧠 Vector Memory
+# 🧠 Vector Memory (RAG)
 
-The project stores previous startup evaluations in ChromaDB and retrieves similar companies for benchmarking.
+The platform stores previous startup evaluations in ChromaDB and retrieves similar startups to provide contextual recommendations.
 
 This enables:
 
-* Historical comparisons
-* Semantic search
-* Context-aware recommendations
+- Historical Comparisons
+- Semantic Search
+- Context-Aware Recommendations
 
 ---
 
@@ -142,56 +171,112 @@ This enables:
 
 Automatically generates professional PDF reports including:
 
-* Executive Summary
-* Business Analysis
-* Financial Review
-* Competitor Analysis
-* Overall Investment Score
-* Strategic Recommendations
+- Executive Summary
+- Business Analysis
+- Financial Review
+- Competitor Analysis
+- Investment Score
+- Strategic Recommendations
 
 ---
 
-# 🌐 API Endpoints
+# 🚀 Technology Stack
 
-| Endpoint                   | Description               |
-| -------------------------- | ------------------------- |
-| GET /                      | Application Status        |
-| POST /api/v1/analyze       | Startup Analysis          |
-| POST /api/v1/dossier       | Multi-Agent Evaluation    |
-| POST /api/v1/dossier/pdf   | Download Executive Report |
-| GET /api/v1/memory/similar | Similar Startup Search    |
+## Backend
+
+- Python
+- FastAPI
+- Google Gemini API
+- ChromaDB
+- ReportLab
+- Pandas
+
+## Frontend
+
+- HTML
+- CSS
+- JavaScript
+
+## AI Technologies
+
+- Multi-Agent Architecture
+- Retrieval-Augmented Generation (RAG)
+- Semantic Vector Search
+- Real-Time Web Search
+
+---
+
+# 🌐 REST API
+
+| Endpoint | Description |
+|----------|-------------|
+| GET / | Application Status |
+| POST /api/v1/analyze | Startup Analysis |
+| POST /api/v1/dossier | Multi-Agent Evaluation |
+| POST /api/v1/dossier/pdf | Generate Executive Report |
+| GET /api/v1/memory/similar | Search Similar Startups |
+
+---
+
+# 📁 Project Structure
+
+```
+startup-business-copilot/
+│
+├── backend/
+│   ├── agents/
+│   ├── api/
+│   ├── memory/
+│   ├── reports/
+│   ├── skills/
+│   ├── tools/
+│   ├── uploads/
+│   ├── config.py
+│   ├── main.py
+│   └── requirements.txt
+│
+├── frontend/
+│
+├── docs/
+│
+├── screenshots/
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
 
 ---
 
 # 📸 Screenshots
 
-Add screenshots inside the `screenshots/` folder.
+> Add screenshots inside the **screenshots/** folder.
 
 Suggested screenshots:
 
-* Dashboard
-* Startup Evaluation
-* AI Chat
-* Generated PDF
-* Vector Memory Search
-
----
-
-# 📁 Sample Data
-
-The repository includes sample startup data to help users test the application.
+- Dashboard
+- Startup Analysis
+- AI Chat
+- Executive PDF
+- Vector Memory Search
 
 ---
 
 # 🚀 Installation
 
 ```bash
-git clone https://github.com/yourusername/startup-business-copilot.git
+git clone https://github.com/Kavya20060702/startup-business-copilot.git
 
 cd startup-business-copilot
 
+cd backend
+
 python -m venv venv
 
+# Windows
+venv\Scripts\activate
+
+# Linux / macOS
 source venv/bin/activate
 
 pip install -r requirements.txt
@@ -203,26 +288,37 @@ uvicorn main:app --reload
 
 # 🎯 Future Improvements
 
-* Google ADK native workflow integration
-* MCP server support
-* Multi-language support
-* Investor CRM integration
-* Cloud deployment
-* Team collaboration
-* Advanced analytics
+- Google ADK Integration
+- MCP Server Support
+- Cloud Deployment
+- Multi-Language Support
+- Investor CRM Integration
+- Team Collaboration
+- Advanced Business Analytics
 
 ---
 
-# 🏆 Highlights
+# 🏆 Project Highlights
 
-* Multi-Agent AI System
-* Vector RAG Memory
-* Real-Time Web Intelligence
-* Executive PDF Reports
-* Modern Dashboard
-* Business Decision Support
+- 🤖 Multi-Agent AI Workflow
+- 🧠 Vector Memory with ChromaDB
+- 🌐 Real-Time Market Intelligence
+- 📄 Automated Executive Reports
+- 📊 Interactive Dashboard
+- 💬 AI Chat Assistant
+- ⚡ FastAPI Backend
+- 🎨 Modern Responsive UI
 
 ---
 
+# 🙏 Acknowledgements
 
-Built as an AI Agents Capstone Project showcasing modern agentic AI, retrieval-augmented generation, business intelligence, and intelligent orchestration.
+This project was developed as part of Kaggle's **AI Agents: Intensive Vibe Coding Capstone Project with Google**.
+
+It demonstrates practical applications of multi-agent AI, retrieval-augmented generation (RAG), business intelligence, and intelligent workflow orchestration for startup evaluation.
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
