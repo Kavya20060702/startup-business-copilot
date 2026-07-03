@@ -75,7 +75,7 @@ Each agent focuses on a specific domain—business strategy, financial analysis,
 
 > **Architecture Diagram**
 
-<img width="1284" height="832" alt="Image" src="https://github.com/user-attachments/assets/203a6f49-8a3d-42bb-b278-09424ba3255e" />
+<img width="1181" height="912" alt="Image" src="https://github.com/user-attachments/assets/046fba00-843e-4795-a5fb-62d9cbc41c96" />
 
 ---
 
