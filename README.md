@@ -248,20 +248,10 @@ startup-business-copilot/
 
 ---
 
-# 📸 Screenshots
-
-> Add screenshots inside the **screenshots/** folder.
-
-Suggested screenshots:
-
-- Dashboard
-- Startup Analysis
-- AI Chat
-- Executive PDF
-- Vector Memory Search
+# Demo Video
 
 ---
-
+https://github.com/user-attachments/assets/86b25f06-d96b-45d9-bfad-6b5ec5e42b7c
 # 🚀 Installation
 
 ```bash
